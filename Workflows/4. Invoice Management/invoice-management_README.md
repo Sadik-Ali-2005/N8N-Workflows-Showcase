@@ -1,54 +1,61 @@
 # **Invoice Management (n8n)**
 
 ## **Overview**
-This workflow automates invoice processing by detecting newly uploaded invoice files, extracting structured information using AI, storing the data in a spreadsheet, and sending automated notifications. It transforms unstructured PDF invoices into organized, actionable records.
+This workflow automates invoice intake and processing by monitoring a designated Google Drive folder, extracting structured invoice data from PDFs using AI, updating a centralized invoice database, and generating professional internal notifications automatically.
+
+It transforms unstructured invoice documents into structured, actionable financial records.
 
 ---
 
 ## **Workflow Architecture**
-Drive Trigger → File Processing → AI Data Extraction → Spreadsheet Update → Notification Generation → Email Delivery
+Drive Folder Trigger → File Download → PDF Text Extraction → AI Structured Data Extraction → Database Update → AI Email Generation → Notification Delivery
 
 ### **1. Triggers**
-- **Google Drive Trigger** – Activates when a new invoice file is created in a specified folder.
-- Designed for real-time invoice intake automation.
+- **Google Drive Trigger (Folder Monitoring)** – Polls a specific folder for newly uploaded invoice files.
+- Designed for continuous invoice intake automation.
 
 ### **2. Core Logic / Agent / Processing**
-- Downloads the newly uploaded invoice file.
-- Extracts text content from PDF documents.
-- Uses an AI-powered Information Extractor to identify structured invoice fields (e.g., invoice number, client details, amounts, dates).
-- Updates or appends structured data into a spreadsheet.
-- Generates a formatted notification message using an AI model.
-- Processes structured output via a JavaScript node for clean formatting.
-- Sends a notification email to the relevant team.
+- Newly uploaded invoice files are downloaded automatically.
+- PDF content is extracted and converted into raw text.
+- An AI-powered Information Extractor identifies structured fields such as:
+  - Invoice Number
+  - Client Details
+  - Total Amount
+  - Invoice Date
+  - Due Date
+- Extracted data is appended or updated in a Google Sheets-based invoice database.
+- A second AI model generates a structured internal email notification in JSON format.
+- A JavaScript node safely parses the structured output before sending.
+- A formatted notification email is delivered to the accounts team.
 
 ### **3. Integrated Tools**
 - **Google Drive (Trigger + Download)** – Detects and retrieves invoice files.
 - **PDF Extraction Node** – Converts invoice documents into readable text.
 - **AI Information Extractor (Gemini Model)** – Extracts structured invoice fields.
-- **Google Sheets** – Stores processed invoice records.
-- **AI Message Generation** – Creates structured notification content.
-- **JavaScript Node** – Parses and formats structured output.
-- **Gmail** – Sends automated invoice notifications.
+- **Google Sheets (Append or Update)** – Maintains the invoice database.
+- **AI Message Generation Model** – Produces structured notification emails.
+- **JavaScript Processing Node** – Parses and validates AI-generated JSON.
+- **Gmail** – Sends automated internal notifications.
 
 ---
 
 ## **Key Features**
-- Event-driven invoice automation
-- AI-based structured data extraction
-- PDF-to-structured-data transformation
-- Automated spreadsheet synchronization
+- Event-driven document ingestion
+- AI-based structured field extraction
+- Append-or-update database logic (deduplication by Invoice Number)
+- JSON-enforced AI output formatting
+- Automated financial record synchronization
 - AI-generated professional email notifications
-- End-to-end automation pipeline
-- Scalable for finance and accounting workflows
+- End-to-end document processing pipeline
 
 ---
 
 ## **Use Cases**
 - Accounts payable automation
 - Invoice intake and tracking systems
-- Financial operations workflows
-- Document processing automation
-- AI-assisted bookkeeping pipelines
+- Finance operations workflow automation
+- AI-powered document processing
+- Automated internal financial notifications
 
 ---
 
@@ -56,14 +63,14 @@ Drive Trigger → File Processing → AI Data Extraction → Spreadsheet Update 
 - n8n Workflow Automation
 - Google Drive Integration
 - PDF Text Extraction
-- Google Gemini Chat Model
+- Google Gemini Models
 - AI Information Extraction
-- Google Sheets Integration
-- JavaScript Processing Node
+- Google Sheets Database
+- JavaScript Post-Processing
 - Gmail Integration
 
 ---
 
 ## **Security & Privacy**
 This workflow is showcased using sanitized screenshots only.  
-No workflow JSON files, credentials, API keys, or production data are included in this repository.
+No workflow JSON files, credentials, API keys, or production data are included in this repository
