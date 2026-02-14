@@ -1,48 +1,49 @@
 # **Content Generator (n8n)**
 
 ## **Overview**
-This workflow automates AI-powered content generation using structured data from a spreadsheet and external enrichment sources. It retrieves input data, enhances it through API integration, generates intelligent content using an AI model, and updates the results back into a structured sheet.
+This workflow automates the creation of newsletter-ready content by combining structured topic management, real-time news retrieval, and AI-powered summarization. It pulls pending topics from a spreadsheet, gathers relevant current articles, synthesizes the information into a concise student-friendly newsletter piece, and updates the content back into the sheet.
 
 ---
 
 ## **Workflow Architecture**
-Manual Trigger → Data Retrieval → External API Enrichment → AI Processing → Sheet Update
+Manual Trigger → Topic Retrieval → News API Fetch → AI Summarization → Sheet Update
 
 ### **1. Triggers**
-- **Manual Execution Trigger** – The workflow starts when the user clicks “Execute workflow”.
-- Designed for controlled batch processing or testing environments.
+- **Manual Execution Trigger** – Runs when “Execute workflow” is clicked.
+- Designed for controlled batch content generation.
 
 ### **2. Core Logic / Agent / Processing**
-- Retrieves rows from a spreadsheet containing structured input data.
-- Sends data to an external API for enrichment or preprocessing.
-- Passes enriched information to an AI Agent powered by a chat model.
-- The AI Agent generates refined, structured, or enhanced content.
-- Generated output is written back to the spreadsheet.
+- Retrieves a topic marked as “Todo” from Google Sheets.
+- Uses an HTTP request to fetch current related news articles via an external news API.
+- Extracts the top three relevant articles.
+- Passes article content to an AI Agent with a structured system prompt.
+- The AI synthesizes all sources into a single cohesive newsletter article.
+- Ensures output is clear, concise, student-friendly, and professionally formatted.
 
 ### **3. Integrated Tools**
-- **Google Sheets (Read)** – Fetches input data.
-- **HTTP Request** – Connects to external APIs for data enrichment.
-- **AI Agent + Chat Model (Gemini)** – Generates AI-driven content.
-- **Google Sheets (Update)** – Writes generated output back into the sheet.
+- **Google Sheets (Read)** – Fetches pending newsletter topics.
+- **HTTP Request (News API)** – Retrieves current related articles.
+- **AI Agent + Google Gemini Model** – Generates structured newsletter content.
+- **Google Sheets (Update)** – Stores generated article, links, and marks status as “Finished”.
 
 ---
 
 ## **Key Features**
-- AI-driven content automation
-- Spreadsheet-based batch processing
-- External API enrichment before generation
-- Structured output storage
-- Modular design for scalable content workflows
-- Suitable for semi-automated publishing pipelines
+- Spreadsheet-driven topic management
+- Real-time news enrichment
+- Multi-source content synthesis
+- Structured AI system prompt for consistent tone
+- Automated status tracking
+- End-to-end newsletter automation
 
 ---
 
 ## **Use Cases**
-- Automated blog or article generation
-- Marketing content creation
-- Product description generation
-- Data-driven content pipelines
-- Batch AI content enrichment
+- College newsletter automation
+- Weekly content pipelines
+- AI-assisted journalism workflows
+- Editorial content drafting
+- Batch AI article generation
 
 ---
 
