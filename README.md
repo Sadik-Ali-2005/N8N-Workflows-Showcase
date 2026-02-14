@@ -18,13 +18,13 @@ This repository showcases multiple automation workflows built using n8n.
 
 # All Workflows
 ## 1. Rag System using the Supabase
-![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/6.%20Rag%20System%20using%20the%20Supabase.png)
+![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/1.%20Rag%20System%20using%20the%20Supabase.png)
 
 ### **Overview**
 This workflow implements a Retrieval-Augmented Generation (RAG) system using Supabase as a vector store. It consists of two coordinated pipelines: one for ingesting and embedding documents into a vector database, and another for enabling an AI chatbot to retrieve relevant context and generate accurate responses.
 
 ### **Link to Workflow:** 
-![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/6.%20Rag%20System%20using%20the%20Supabase)
+![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/1.%20Rag%20System%20using%20the%20Supabase)
 
 ## 2. Content Generator
 ![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/2.%20Content%20Generator.png)
