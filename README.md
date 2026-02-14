@@ -23,6 +23,7 @@ This repository showcases multiple automation workflows built using n8n.
 
 ### **Overview**
 This workflow automates college-related communication and scheduling by combining AI-driven decision-making with external service integrations. It intelligently routes user requests to appropriate actions such as sending emails, retrieving route data, checking weather conditions, or creating calendar events.
+### **Link to Workflow:** ![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/1.%20College%20Route%20Emailing)
 
 ## 2. Content Generator
 ![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/2.%20Content%20Generator.png)
