@@ -1,52 +1,59 @@
 # **Customer Email Support (n8n)**
 
 ## **Overview**
-This workflow automates customer email support using AI-powered classification, contextual understanding, and intelligent response generation. It processes incoming emails, determines their intent, retrieves relevant contextual information, and automatically generates appropriate replies.
+This workflow implements an AI-powered customer support automation system that classifies incoming emails, retrieves relevant knowledge from a vector database, and generates contextual, friendly replies automatically. It combines intent detection, Retrieval-Augmented Generation (RAG), and structured response formatting within a fully automated Gmail workflow.
 
 ---
 
 ## **Workflow Architecture**
-Gmail Trigger → AI Classification → Context Retrieval → AI Agent Processing → Email Labeling → Automated Reply
+Gmail Polling → Intent Classification → Conditional Routing → Knowledge Retrieval → AI Response Generation → Email Labeling → Automated Reply
 
 ### **1. Triggers**
-- **Gmail Trigger** – Activates whenever a new email is received.
-- Designed for real-time customer support automation.
+- **Gmail Trigger (Polling every minute)** – Detects new incoming emails in real time.
+- Designed for continuous inbox monitoring.
 
 ### **2. Core Logic / Agent / Processing**
-- Incoming emails are analyzed using a text classification model.
-- Emails are categorized (e.g., support-related vs. other types).
-- Relevant contextual knowledge is retrieved using a vector store.
-- An AI Agent generates a structured and professional response.
-- Non-relevant emails can follow an alternative path or no-operation branch.
+- Incoming email text is analyzed using an AI-based text classifier.
+- Emails are categorized into:
+  - *Customer Support*
+  - *Other*
+- Only support-related emails proceed through the AI response pipeline.
+- The AI Agent uses:
+  - A structured system prompt to enforce tone and formatting
+  - A vector database tool for knowledge retrieval
+- Relevant contextual information is retrieved from Pinecone using embeddings.
+- The AI generates a contextual, friendly response.
+- Non-support emails follow a no-operation branch.
 
 ### **3. Integrated Tools**
-- **Gmail (Trigger)** – Detects new incoming emails.
-- **Text Classifier (AI Model)** – Categorizes email intent.
-- **Google Gemini Chat Model** – Generates intelligent responses.
-- **Embeddings Model** – Converts text into vector representations.
-- **Pinecone Vector Store** – Retrieves contextual knowledge for accurate replies.
-- **Gmail (Add Label)** – Labels processed emails.
-- **Gmail (Reply to Message)** – Sends automated responses.
+- **Gmail Trigger** – Monitors new incoming emails.
+- **Text Classifier (Gemini Model)** – Categorizes email intent.
+- **Embeddings Model (Gemini)** – Converts text into vector representations.
+- **Pinecone Vector Store** – Retrieves contextual newsletter knowledge.
+- **AI Agent** – Generates structured responses using RAG.
+- **Gmail (Add Label)** – Marks processed emails as important.
+- **Gmail (Reply to Message)** – Sends automated replies within the same thread.
 
 ---
 
 ## **Key Features**
-- AI-powered email intent classification
-- Retrieval-Augmented Generation (RAG) support
-- Automated response drafting
-- Context-aware reply generation
-- Email labeling and workflow routing
-- Real-time processing capability
-- Scalable customer support automation
+- Real-time email monitoring
+- AI-powered intent classification
+- Retrieval-Augmented Generation (RAG)
+- Vector-based semantic search
+- Structured response formatting
+- Conditional workflow branching
+- Automatic email labeling
+- Thread-aware reply automation
 
 ---
 
 ## **Use Cases**
-- Automated customer support systems
-- FAQ-based email response handling
-- Support ticket pre-processing
-- Intelligent inbox management
-- AI-assisted helpdesk workflows
+- Automated helpdesk systems
+- Newsletter support automation
+- FAQ-based response generation
+- AI-assisted inbox management
+- Scalable customer support workflows
 
 ---
 
@@ -54,9 +61,10 @@ Gmail Trigger → AI Classification → Context Retrieval → AI Agent Processin
 - n8n Workflow Automation
 - Gmail Integration
 - Google Gemini Chat Model
-- Text Classification Model
+- AI Text Classification
 - Embeddings Model
 - Pinecone Vector Database
+- Retrieval-Augmented Generation (RAG)
 - AI Agent Architecture
 
 ---
