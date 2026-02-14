@@ -30,7 +30,7 @@ This workflow implements a Retrieval-Augmented Generation (RAG) system using Sup
 ![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/2.%20Content%20Generator.png)
 
 ### **Overview**
-This workflow automates AI-powered content generation using structured data from a spreadsheet and external enrichment sources. It retrieves input data, enhances it through API integration, generates intelligent content using an AI model, and updates the results back into a structured sheet.
+This workflow automates the creation of newsletter-ready content by combining structured topic management, real-time news retrieval, and AI-powered summarization. It pulls pending topics from a spreadsheet, gathers relevant current articles, synthesizes the information into a concise student-friendly newsletter piece, and updates the content back into the sheet.
 
 ### **Link to Workflow:** 
 [2_Content_Generator](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/2.%20Content%20Generator)
@@ -39,7 +39,7 @@ This workflow automates AI-powered content generation using structured data from
 ![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/3.%20Customer%20Email%20Support.png)
 
 ## **Overview**
-This workflow automates customer email support using AI-powered classification, contextual understanding, and intelligent response generation. It processes incoming emails, determines their intent, retrieves relevant contextual information, and automatically generates appropriate replies.
+This workflow implements an AI-powered customer support automation system that classifies incoming emails, retrieves relevant knowledge from a vector database, and generates contextual, friendly replies automatically. It combines intent detection, Retrieval-Augmented Generation (RAG), and structured response formatting within a fully automated Gmail workflow.
 
 ### **Link to Workflow:** 
 [3_Customer_Email_Support](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/3.%20Customer%20Email%20Support)
@@ -48,7 +48,7 @@ This workflow automates customer email support using AI-powered classification, 
 ![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/4.%20Invoice%20Management.png)
 
 ### **Overview**
-This workflow automates invoice processing by detecting newly uploaded invoice files, extracting structured information using AI, storing the data in a spreadsheet, and sending automated notifications. It transforms unstructured PDF invoices into organized, actionable records.
+This workflow automates invoice intake and processing by monitoring a designated Google Drive folder, extracting structured invoice data from PDFs using AI, updating a centralized invoice database, and generating professional internal notifications automatically.
 
 ### **Link to Workflow:** 
 [4_Invoice_Management](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/4.%20Invoice%20Management)
@@ -57,7 +57,7 @@ This workflow automates invoice processing by detecting newly uploaded invoice f
 ![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/5.%20Questions%20Extractor%20and%20Answer%20Creator.png)
 
 ### **Overview**
-This workflow automates the extraction of questions from uploaded documents and generates intelligent answers using AI. It processes submitted files, performs OCR when necessary, structures extracted text, generates contextual responses, and uploads the final output file for further use.
+This workflow automates the ingestion, processing, consolidation, and restructuring of multiple question papers into a single, unified, deduplicated exam document. It uses OCR to extract text from uploaded files, applies AI-driven semantic processing to merge and clean content, removes duplicate questions across papers, and generates a structured HTML exam paper ready for distribution.
 
 ### **Link to Workflow:** 
 [5_Questions_Extractor_and_Answer_Creator](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/5.%20Questions%20Extractor%20and%20Answer%20Creator)
