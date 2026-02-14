@@ -1,62 +1,72 @@
 # **Questions Extractor and Answer Creator (n8n)**
 
 ## **Overview**
-This workflow automates the extraction of questions from uploaded documents and generates intelligent answers using AI. It processes submitted files, performs OCR when necessary, structures extracted text, generates contextual responses, and uploads the final output file for further use.
+This workflow automates the ingestion, processing, consolidation, and restructuring of multiple question papers into a single, unified, deduplicated exam document. It uses OCR to extract text from uploaded files, applies AI-driven semantic processing to merge and clean content, removes duplicate questions across papers, and generates a structured HTML exam paper ready for distribution.
 
 ---
 
 ## **Workflow Architecture**
-Form Submission → File Processing → OCR Extraction → Data Aggregation → AI Answer Generation → File Creation → Upload
+Form Submission → File Upload → OCR Processing → Content Aggregation → AI Deduplication & Structuring → HTML Generation → Cloud Storage Upload
 
 ### **1. Triggers**
-- **Form Submission Trigger** – Activates when a user submits a form containing document input.
-- Supports batch processing through looping over submitted items.
+- **Form Trigger** – Users upload one or more question paper files.
+- Supports batch processing via loop control.
 
 ### **2. Core Logic / Agent / Processing**
-- Uploaded documents are sent for OCR processing to extract text content.
-- The workflow retrieves signed URLs and OCR results.
-- Extracted text is aggregated and processed using JavaScript for structured formatting.
-- An AI Agent powered by a chat model generates answers based on extracted questions.
-- Additional formatting and processing steps refine the output.
-- The final file is generated and uploaded to cloud storage.
+- Uploaded documents are sent to Mistral’s OCR API for text extraction.
+- A signed URL is generated for secure OCR processing.
+- Extracted markdown content from all papers is aggregated.
+- JavaScript processing combines multiple papers into a single structured dataset.
+- An AI Agent:
+  - Cleans OCR artifacts
+  - Merges sections by mark value (2, 5, 10, etc.)
+  - Semantically deduplicates similar questions
+  - Renumbers questions sequentially
+  - Tracks source papers
+  - Generates a unified, clean HTML exam paper
+- The final HTML output is converted to base64 format.
+- The generated exam file is uploaded to Google Drive.
 
 ### **3. Integrated Tools**
-- **Form Trigger** – Captures user-submitted documents.
-- **HTTP Requests (OCR Service)** – Uploads files and retrieves OCR results.
-- **Aggregation Node** – Consolidates extracted data.
-- **JavaScript Processing Nodes** – Formats and structures text.
-- **AI Agent + Google Gemini Chat Model** – Generates intelligent answers.
-- **Google Drive (Upload)** – Stores the processed output file.
+- **Form Trigger** – Accepts file submissions.
+- **HTTP Requests (Mistral API)** – Handles file upload, signed URL retrieval, and OCR processing.
+- **Aggregation Node** – Consolidates multiple document outputs.
+- **JavaScript Processing Nodes** – Combines and formats extracted data.
+- **AI Agent + Google Gemini Model** – Performs semantic deduplication and structured HTML generation.
+- **Google Drive (Upload)** – Stores the final consolidated exam file.
 
 ---
 
 ## **Key Features**
-- Automated document-based question extraction
-- OCR integration for scanned or image-based files
-- AI-powered answer generation
-- Structured text aggregation and transformation
-- Batch processing support
-- End-to-end document-to-answer automation
+- Multi-document ingestion
+- OCR-based text extraction
+- Semantic duplicate detection across papers
+- Mark-based section merging
+- Automated renumbering and restructuring
+- Clean, strict HTML generation
+- Batch file handling with loop control
+- End-to-end document automation
 
 ---
 
 ## **Use Cases**
-- Educational content generation
-- Automated assignment solution drafts
-- Question bank creation
-- Study material generation
-- Document-based knowledge extraction workflows
+- Academic exam consolidation
+- Question bank normalization
+- Study material standardization
+- Institutional exam restructuring
+- Large-scale document cleanup automation
 
 ---
 
 ## **Technical Stack**
 - n8n Workflow Automation
-- Form-Based Triggering
-- OCR API Integration
-- JavaScript Data Processing
+- Mistral OCR API
+- HTTP API Integration
+- Google Gemini Model
 - AI Agent Architecture
-- Google Gemini Chat Model
+- JavaScript Data Processing
 - Google Drive Integration
+- Semantic Deduplication Logic
 
 ---
 
