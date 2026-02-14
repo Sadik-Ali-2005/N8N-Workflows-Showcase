@@ -1,59 +1,75 @@
-# **College Route Emailing Workflow (n8n)**
+#College Route Emailing Workflow (n8n)
+##Overview
 
-## **Overview**
-This workflow automates college-related communication and scheduling by combining AI-driven decision-making with external service integrations. It intelligently routes user requests to appropriate actions such as sending emails, retrieving route data, checking weather conditions, or creating calendar events.
+This workflow automates college-related communication and scheduling by combining AI decision-making with email, calendar, and external data sources. It is designed to intelligently route actions based on user messages or scheduled triggers.
 
----
+High-Level Flow
 
-## **Workflow Architecture**
-**Trigger → AI Agent → Tool Selection → Action Execution**
+Trigger → AI Agent → External Tools → Action Execution
 
-### **1. Triggers**
-- **Chat Trigger** – Activates when a user message is received.
-- **Schedule Trigger** – Executes the workflow at defined intervals.
+Trigger
 
-### **2. AI Agent**
-- Interprets user intent using an AI chat model.
-- Maintains contextual awareness through memory.
-- Dynamically selects the appropriate tool based on the request.
+Activates when a chat message is received
 
-### **3. Integrated Tools**
-- **Gmail** – Sends automated email notifications.
-- **OpenWeatherMap** – Retrieves real-time weather information.
-- **College Routes (Sheet Read)** – Fetches structured route data.
-- **Google Calendar** – Creates calendar events automatically.
-- **Commute Workflow (Optional / Deactivated)** – Extended routing capability.
+Can also run on a scheduled basis
 
----
+AI Agent
 
-## **Key Features**
-- AI-powered workflow orchestration
-- Multi-trigger automation (chat + scheduled execution)
-- Intelligent tool routing
-- Context retention using memory
-- Modular and extensible design
-- Integration with productivity and data services
+Acts as the central decision-maker
 
----
+Interprets user intent using an AI chat model
 
-## **Use Cases**
-- College administration automation
-- Event scheduling and coordination
-- Smart assistant for route planning
-- Automated communication workflows
-- AI-powered educational support systems
+Determines which action or tool should be used
 
----
+Integrated Tools
 
-## **Technical Stack**
-- n8n Workflow Automation
-- AI Agent + Chat Model
-- Google Workspace Integrations
-- External API Integration
-- Conversational Memory Handling
+Email sending
 
----
+Weather lookup
 
-## **Security & Privacy**
-This workflow is showcased using sanitized screenshots only.  
-No workflow JSON files, credentials, API keys, or production data are included in this repository.
+College route data lookup
+
+Calendar event creation
+
+Optional data commit workflow (currently deactivated)
+
+Key Features
+
+AI-driven routing using an agent-based design
+
+Multi-trigger support (chat-based and scheduled execution)
+
+Tool orchestration from a single AI agent
+
+Context awareness via memory integration
+
+Extensible design allowing additional tools to be plugged in easily
+
+Use Cases
+
+Automated college communication workflows
+
+Scheduling college visits or events
+
+Sending route-based or context-aware emails
+
+AI-powered administrative assistance
+
+Smart assistants for educational institutions
+
+Technical Highlights
+
+n8n AI Agent node
+
+AI chat model integration
+
+Memory for conversational context
+
+External APIs (weather, data sources)
+
+Email and calendar automation
+
+Notes on Security
+
+This workflow is showcased using screenshots only.
+No workflow JSON, credentials, secrets, or production data are included.
