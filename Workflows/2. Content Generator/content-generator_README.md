@@ -22,7 +22,7 @@ Manual Trigger → Topic Retrieval → News API Fetch → AI Summarization → S
 
 ### **3. Integrated Tools**
 - **Google Sheets (Read)** – Fetches pending newsletter topics.
-- **HTTP Request (News API)** – Retrieves current related articles.
+- **HTTP Request (Tavily API)** – Retrieves current related articles.
 - **AI Agent + Google Gemini Model** – Generates structured newsletter content.
 - **Google Sheets (Update)** – Stores generated article, links, and marks status as “Finished”.
 
@@ -50,7 +50,7 @@ Manual Trigger → Topic Retrieval → News API Fetch → AI Summarization → S
 ## **Technical Stack**
 - n8n Workflow Automation
 - Google Sheets Integration
-- HTTP API Integration
+- Tavily API Integration
 - AI Agent Architecture
 - Google Gemini Chat Model
 
