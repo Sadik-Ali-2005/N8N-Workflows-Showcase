@@ -61,3 +61,12 @@ This workflow automates the ingestion, processing, consolidation, and restructur
 
 ### **Link to Workflow:** 
 [5_Questions_Extractor_and_Answer_Creator](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/5.%20Questions%20Extractor%20and%20Answer%20Creator)
+
+## 6. Results Downloader
+![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/6.%20Resuts%20Downloader.png)
+
+### **Overview**
+This workflow automates the retrieval and structuring of student examination results by combining n8n orchestration with a custom Playwright browser automation service. It processes pending student records, retrieves result data from a college portal, extracts structured marks using AI, and updates a centralized spreadsheet.
+
+### **Link to Workflow:** 
+[6_Results_Downloader](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/6.%20Results%20Downloader)
