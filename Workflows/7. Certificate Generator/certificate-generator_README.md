@@ -3,7 +3,7 @@
 ## **Overview**
 This workflow automates certificate generation with built-in state management, version control, and data consistency enforcement. It monitors new submissions, validates inputs, detects existing certificates, handles correction scenarios, and ensures that only one valid active certificate exists per register number at any time.
 
-The system implements idempotent behavior and controlled regeneration logic to prevent duplication and data conflicts.
+The system implements controlled regeneration logic to prevent duplication and data conflicts.
 
 ---
 
