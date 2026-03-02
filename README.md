@@ -72,10 +72,10 @@ This workflow automates the retrieval and structuring of student examination res
 [6_Results_Downloader](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/6.%20Results%20Downloader)
 
 ## 7. Certificate Generator
-![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/6.%20Resuts%20Downloader.png)
+![](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/blob/main/Workflow_Images/7.%20Certificate%20Generator.png)
 
 ### **Overview**
 This workflow automates certificate generation with built-in state management, version control, and data consistency enforcement. It monitors new submissions, validates inputs, detects existing certificates, handles correction scenarios, and ensures that only one valid active certificate exists per register number at any time.
 
 ### **Link to Workflow:** 
-[7_Certificate_Generator](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/6.%20Results%20Downloader)
+[7_Certificate_Generator](https://github.com/Sadik-Ali-2005/N8N-Workflows-Showcase/tree/main/Workflows/7.%20Certificate%20Generator)
